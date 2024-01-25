@@ -1,0 +1,141 @@
+{
+  // "editor.wordWrapColumn": 90, //90 - 120
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.renderControlCharacters": false,
+  "editor.lineHeight": 24,
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "editor.fontSize": 16,
+  "terminal.integrated.fontSize": 16,
+  "liveServer.settings.donotVerifyTags": true,
+  "editor.renderWhitespace": "none",
+  "editor.minimap.enabled": false,
+  "editor.fontFamily": "'Cascadia Code', 'JetBrains Mono', 'Fira Code'",
+  // "editor.rulers": [90],
+  "workbench.iconTheme": "symbols",
+  "workbench.startupEditor": "none",
+  "editor.wordWrap": "wordWrapColumn",
+  "audioCues.lineHasError": "off",
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "name": "italic font",
+        "scope": [
+          "comment",
+          "keyword",
+          "storage",
+          "keyword.control",
+          "keyword.control.from",
+          "keyword.control.flow",
+          "keyword.operator.new",
+          "keyword.control.import",
+          "keyword.control.export",
+          "keyword.control.default",
+          "keyword.control.trycatch",
+          "keyword.control.conditional",
+          "storage.type",
+          "storage.type.class",
+          "storage.modifier.tsx",
+          "storage.type.function",
+          "storage.modifier.async",
+          "variable.language",
+          "variable.language.this",
+          "variable.language.super",
+          "meta.class",
+          "meta.var.expr",
+          "constant.language.null",
+          "support.type.primitive",
+          "entity.name.method.js",
+          "entity.other.attribute-name",
+          "punctuation.definition.comment",
+          "text.html.basic entity.other.attribute-name",
+          "tag.decorator.js entity.name.tag.js",
+          "tag.decorator.js punctuation.definition.tag.js",
+          "source.js constant.other.object.key.js string.unquoted.label.js"
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      }
+    ]
+  },
+  "liveServer.settings.donotShowInfoMsg": true,
+  "editor.accessibilitySupport": "off",
+  "editor.tabSize": 2,
+  "editor.inlineSuggest.enabled": true,
+  "editor.cursorBlinking": "expand",
+  "editor.fontLigatures": true,
+  // "html.format.wrapLineLength": 90, //30
+  "splitHTMLAttributes.closingBracketOnNewLine": true,
+  "git.confirmSync": false,
+  "files.trimTrailingWhitespace": true,
+  "sync.gist": "0f3fafc398f42f794a9dce659ce8eab4",
+  "git.enableSmartCommit": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "explorer.confirmDragAndDrop": false,
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "svelte.enable-ts-plugin": true,
+  "workbench.colorTheme": "Cobalt2",
+  "javascript.format.semicolons": "insert",
+  "typescript.format.semicolons": "insert",
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "editor.bracketPairColorization.independentColorPoolPerBracketType": true,
+  "editor.guides.bracketPairs": true,
+  "eslint.codeActionsOnSave.rules": null,
+  "svelte.plugin.svelte.format.config.singleQuote": true,
+  "eslint.format.enable": true,
+  "errorLens.excludeBySource": [
+    "svelte(a11y-click-events-have-key-events)"
+  ],
+  "git.openRepositoryInParentFolders": "never",
+  "tailwindCSS.includeLanguages": {
+    "html": "html",
+    "javascript": "javascript",
+    "css": "css"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "console-ninja.featureSet": "Community",
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": false,
+    "markdown": true,
+    "scminput": false
+  },
+  "css-organizer.userGroupingFileUse": true,
+  "workbench.activityBar.location": "hidden",
+  "symbols.hidesExplorerArrows": false,
+  "editor.linkedEditing": true,
+  "breadcrumbs.enabled": false,
+  "editor.stickyScroll.enabled": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "workbench.preferredHighContrastColorTheme": "Cobalt2",
+  "files.associations": {
+    "*.astro": "astro",
+    "*.mdx": "astro"
+  },
+  "window.zoomLevel": 2,
+  "workbench.productIconTheme": "fluent-icons",
+  "symbols.folders.associations": {
+    "pages": "folder-target",
+    "utils": "folder-utils",
+    "interfaces": "folder-red-code"
+  },
+
+  // CONFIGURACION DE PRETTIER
+  "editor.formatOnSave": true,
+  "prettier.requireConfig": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  }
+}

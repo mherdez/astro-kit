@@ -9,24 +9,24 @@
       "files": "*.{js*,ts*}",
       "options": {
         "jsxSingleQuote": true,
-        "semi": false,
-        "singleQuote": true
+        "singleQuote": true,
+        "semi": false
       }
     },
     {
       "files": "*.astro",
       "options": {
         "jsxSingleQuote": false,
-        "semi": false,
-        "singleQuote": true
+        "singleQuote": true,
+        "semi": false
       }
     },
     {
       "files": "*.svelte",
       "options": {
+        "parser": "svelte",
         "singleQuote": true,
-        "semi": false,
-        "parser": "svelte"
+        "semi": false
       }
     }
   ]

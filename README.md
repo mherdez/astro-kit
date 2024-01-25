@@ -1,54 +1,110 @@
-# Astro Starter Kit: Basics
+# Configuraciones del Proyecto
 
-```sh
-npm create astro@latest -- --template basics
+Esta configuración es para crear una plantilla de proyecto con Astro, React, Svelte, Prettier, ESLint, TypeScript y TailwindCSS.
+
+Formatea el código con Prettier con las reglas de StandardJS, (comillas simples en Js y Ts, sin punto y coma y comillas dobles en formato HTML tanto en Astro y Svelte).
+
+:::danger IMPORTANTE
+En React no se puede usar comillas dobles en los atributos de los elementos HTML, por lo que se debe usar comillas simples. Esto debido a que React usa JSX y no HTML y la libreria Standard lo reconoce como un error.
+:::
+
+## settings.json (VSCode)
+
+```json
+  // CONFIGURACION DE PRETTIER
+  "editor.formatOnSave": true,
+  "prettier.requireConfig": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  }
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Extensiones de VSCode
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- [Astro](https://marketplace.visualstudio.com/items?itemName=astro-build.astro-vscode)
+- [Oxc](https://marketplace.visualstudio.com/items?itemName=oxc.oxc-vscode)
+- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+- [StandardJS](https://marketplace.visualstudio.com/items?itemName=standard.vscode-standard)
+- [Svelte for VS Code](https://marketplace.visualstudio.com/items?itemName=svelte.svelte-vscode)
+- [Tailwind CSS IntelliSense](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss)
+- [ES7+ React/Redux/React-Native snippets](https://marketplace.visualstudio.com/items?itemName=dsznajder.es7-react-js-snippets)
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## package.json
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
+```json
+{
+  "name": "astro-kit",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.4.1",
+    "@astrojs/react": "^3.0.9",
+    "@astrojs/svelte": "^5.0.3",
+    "@astrojs/tailwind": "^5.1.0",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "astro": "^4.2.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "svelte": "^4.2.9",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.3.3"
+  },
+  "devDependencies": {
+    "prettier-plugin-svelte": "^3.1.2",
+    "ts-standard": "^12.0.2"
+  }
+}
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## .prettierrc.json
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+```json
+{
+  "tabWidth": 2,
+  "useTabs": false,
+  "trailingComma": "all",
+  "plugins": ["prettier-plugin-svelte"],
+  "pluginSearchDirs": ["."],
+  "overrides": [
+    {
+      "files": "*.{js*,ts*}",
+      "options": {
+        "jsxSingleQuote": true,
+        "singleQuote": true,
+        "semi": false
+      }
+    },
+    {
+      "files": "*.astro",
+      "options": {
+        "jsxSingleQuote": false,
+        "singleQuote": true,
+        "semi": false
+      }
+    },
+    {
+      "files": "*.svelte",
+      "options": {
+        "parser": "svelte",
+        "singleQuote": true,
+        "semi": false
+      }
+    }
+  ]
+}
+```
