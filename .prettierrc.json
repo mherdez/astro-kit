@@ -1,0 +1,33 @@
+{
+  "tabWidth": 2,
+  "useTabs": false,
+  "trailingComma": "all",
+  "plugins": ["prettier-plugin-svelte"],
+  "pluginSearchDirs": ["."],
+  "overrides": [
+    {
+      "files": "*.{js*,ts*}",
+      "options": {
+        "jsxSingleQuote": true,
+        "semi": false,
+        "singleQuote": true
+      }
+    },
+    {
+      "files": "*.astro",
+      "options": {
+        "jsxSingleQuote": false,
+        "semi": false,
+        "singleQuote": true
+      }
+    },
+    {
+      "files": "*.svelte",
+      "options": {
+        "singleQuote": true,
+        "semi": false,
+        "parser": "svelte"
+      }
+    }
+  ]
+}
