@@ -86,7 +86,8 @@ En React no se puede usar comillas dobles en los atributos de los elementos HTML
       "options": {
         "jsxSingleQuote": true,
         "singleQuote": true,
-        "semi": false
+        "semi": false,
+        "trailingComma": "none"
       }
     },
     {
